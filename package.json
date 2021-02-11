@@ -1,0 +1,24 @@
+{
+  "name": "create-rs-project",
+  "version": "1.0.1",
+  "description": "",
+  "main": "create.bs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "re:build": "bsb -make-world -clean-world",
+    "re:watch": "bsb -make-world -clean-world -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProCode2/create-rs-project.git"
+  },
+  "author": "ProCode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProCode2/create-rs-project/issues"
+  },
+  "homepage": "https://github.com/ProCode2/create-rs-project#readme",
+  "devDependencies": {
+    "bs-platform": "^9.0.0"
+  }
+}
