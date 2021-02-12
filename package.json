@@ -1,9 +1,13 @@
 {
   "name": "create-rs-project",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
-  "main": "create.bs.js",
+  "main": "main.js",
+  "bin": {
+    "*": "main.js"
+  },
   "scripts": {
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "re:build": "bsb -make-world -clean-world",
     "re:watch": "bsb -make-world -clean-world -w"
