@@ -1,6 +1,7 @@
-let packageJson = `
+let packageJson = name =>
+  `
 {
-  "name": "heya",
+  "name": "${name}",
   "version": "0.0.1",
   "scripts": {
     "build": "bsb -make-world",
@@ -18,10 +19,10 @@ let packageJson = `
 }
 `
 
-let bscongifJson = `
+let bscongifJson = name =>
+  `
 {
-  "$schema": "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/master/docs/docson/build-schema.json",
-  "name": "heya",
+  "name": "${name}",
   "version": "0.0.1",
   "sources": {
     "dir" : "src",

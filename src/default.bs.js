@@ -2,9 +2,13 @@
 'use strict';
 
 
-var packageJson = "\n{\n  \"name\": \"heya\",\n  \"version\": \"0.0.1\",\n  \"scripts\": {\n    \"build\": \"bsb -make-world\",\n    \"clean\": \"bsb -clean-world\",\n    \"start\": \"bsb -make-world -w\"\n  },\n  \"keywords\": [\n    \"rescript\"\n  ],\n  \"author\": \"\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"bs-platform\": \"*\"\n  }\n}\n";
+function packageJson(name) {
+  return "\n{\n  \"name\": \"" + name + "\",\n  \"version\": \"0.0.1\",\n  \"scripts\": {\n    \"build\": \"bsb -make-world\",\n    \"clean\": \"bsb -clean-world\",\n    \"start\": \"bsb -make-world -w\"\n  },\n  \"keywords\": [\n    \"rescript\"\n  ],\n  \"author\": \"\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"bs-platform\": \"*\"\n  }\n}\n";
+}
 
-var bscongifJson = "\n{\n  \"$schema\": \"https://raw.githubusercontent.com/rescript-lang/rescript-compiler/master/docs/docson/build-schema.json\",\n  \"name\": \"heya\",\n  \"version\": \"0.0.1\",\n  \"sources\": {\n    \"dir\" : \"src\",\n    \"subdirs\" : true\n  },\n  \"package-specs\": {\n    \"module\": \"commonjs\",\n    \"in-source\": true\n  },\n  \"suffix\": \".bs.js\",\n  \"bs-dependencies\": [\n  ],\n  \"warnings\": {\n    \"error\" : \"+101\"\n  },\n}\n";
+function bscongifJson(name) {
+  return "\n{\n  \"name\": \"" + name + "\",\n  \"version\": \"0.0.1\",\n  \"sources\": {\n    \"dir\" : \"src\",\n    \"subdirs\" : true\n  },\n  \"package-specs\": {\n    \"module\": \"commonjs\",\n    \"in-source\": true\n  },\n  \"suffix\": \".bs.js\",\n  \"bs-dependencies\": [\n  ],\n  \"warnings\": {\n    \"error\" : \"+101\"\n  },\n}\n";
+}
 
 var demoRes = "\nJs.log(\"Hello, World!\")\n";
 

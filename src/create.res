@@ -26,17 +26,17 @@ let directoryPath = pathJoin([cwd(), directoryName])
 
 if !existsSync(directoryPath) {
   Js.log("Generating Project Directory...")
-  mkdirSync(cwd() ++ "/heya")
-  mkdirSync(cwd() ++ "/heya/src")
-  createWriteStream(cwd() ++ "/heya/README.md")
+  mkdirSync(directoryPath)
+  mkdirSync(pathJoin([directoryPath, "src"]))
+  createWriteStream(pathJoin([directoryPath, "README.md"]))
 
   Js.log("Writing default configurations...")
-  writeFile(cwd() ++ "/heya/src/demo.res", Default.demoRes)
-  writeFile(cwd() ++ "/heya/bsconfig.json", Default.bscongifJson)
-  writeFile(cwd() ++ "/heya/package.json", Default.packageJson)
-  writeFile(cwd() ++ "/heya/.gitignore", Default.gitIgnore)
+  writeFile(pathJoin([directoryPath, "src", "demo.res"]), Default.demoRes)
+  writeFile(pathJoin([directoryPath, "bsconfig.json"]), Default.bscongifJson(directoryName))
+  writeFile(pathJoin([directoryPath, "package.json"]), Default.packageJson(directoryName))
+  writeFile(pathJoin([directoryPath, ".gitignore"]), Default.gitIgnore)
 
   Js.log("Installing Dependencies...")
-  let _ = exec("npm install", {cwd: cwd() ++ "/heya"})
+  let _ = exec("npm install", {cwd: directoryPath})
   Js.log("Done!")
 }

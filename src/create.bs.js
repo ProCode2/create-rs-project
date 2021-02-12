@@ -14,17 +14,17 @@ var directoryPath = Path.join(process.cwd(), directoryName);
 
 if (!Fs.existsSync(directoryPath)) {
   console.log("Generating Project Directory...");
-  Fs.mkdirSync(process.cwd() + "/heya");
-  Fs.mkdirSync(process.cwd() + "/heya/src");
-  Fs.createWriteStream(process.cwd() + "/heya/README.md");
+  Fs.mkdirSync(directoryPath);
+  Fs.mkdirSync(Path.join(directoryPath, "src"));
+  Fs.createWriteStream(Path.join(directoryPath, "README.md"));
   console.log("Writing default configurations...");
-  Fs.writeFileSync(process.cwd() + "/heya/src/demo.res", Default$CreateRsProject.demoRes);
-  Fs.writeFileSync(process.cwd() + "/heya/bsconfig.json", Default$CreateRsProject.bscongifJson);
-  Fs.writeFileSync(process.cwd() + "/heya/package.json", Default$CreateRsProject.packageJson);
-  Fs.writeFileSync(process.cwd() + "/heya/.gitignore", Default$CreateRsProject.gitIgnore);
+  Fs.writeFileSync(Path.join(directoryPath, "src", "demo.res"), Default$CreateRsProject.demoRes);
+  Fs.writeFileSync(Path.join(directoryPath, "bsconfig.json"), Default$CreateRsProject.bscongifJson(directoryName));
+  Fs.writeFileSync(Path.join(directoryPath, "package.json"), Default$CreateRsProject.packageJson(directoryName));
+  Fs.writeFileSync(Path.join(directoryPath, ".gitignore"), Default$CreateRsProject.gitIgnore);
   console.log("Installing Dependencies...");
   Child_process.execSync("npm install", {
-        cwd: process.cwd() + "/heya"
+        cwd: directoryPath
       });
   console.log("Done!");
 }
