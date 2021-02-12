@@ -1,6 +1,6 @@
 {
   "name": "create-rs-project",
-  "version": "1.0.8",
+  "version": "1.0.7",
   "description": "",
   "main": "main.js",
   "bin": {
@@ -21,7 +21,7 @@
     "url": "https://github.com/ProCode2/create-rs-project/issues"
   },
   "homepage": "https://github.com/ProCode2/create-rs-project#readme",
-  "devDependencies": {
+  "dependencies": {
     "bs-platform": "^9.0.0"
   }
 }
