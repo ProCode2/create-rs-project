@@ -41,6 +41,6 @@ Please do!
 
 - Create Issues about bug reports, feature requests.
 - Open pull requests with any feature you'd like this project to have.
-  - for now there are no restrictons on what PRs should be opened as long as they solve an issue or add a feture.
+  - for now there are no restrictons on what PRs should be opened as long as they solve an issue or add a feature.
 
 # Let your Rescript friends know!
