@@ -23,7 +23,7 @@ if (!Fs.existsSync(directoryPath)) {
   Fs.writeFileSync(Path.join(directoryPath, "package.json"), Default$CreateRsProject.packageJson(directoryName));
   Fs.writeFileSync(Path.join(directoryPath, ".gitignore"), Default$CreateRsProject.gitIgnore);
   console.log("Installing Dependencies...");
-  Child_process.execSync("npm install", {
+  Child_process.execSync("npm install --save", {
         cwd: directoryPath
       });
   console.log("Done!");

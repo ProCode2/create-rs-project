@@ -37,6 +37,6 @@ if !existsSync(directoryPath) {
   writeFile(pathJoin([directoryPath, ".gitignore"]), Default.gitIgnore)
 
   Js.log("Installing Dependencies...")
-  let _ = exec("npm install", {cwd: directoryPath})
+  let _ = exec("npm install --save", {cwd: directoryPath})
   Js.log("Done!")
 }

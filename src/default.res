@@ -3,6 +3,7 @@ let packageJson = name =>
 {
   "name": "${name}",
   "version": "0.0.1",
+  "description": "The great rescript project ${name}",
   "scripts": {
     "build": "bsb -make-world",
     "clean": "bsb -clean-world",
