@@ -5,17 +5,17 @@ let packageJson = name =>
   "version": "0.0.1",
   "description": "The great rescript project ${name}",
   "scripts": {
-    "build": "bsb -make-world",
-    "clean": "bsb -clean-world",
-    "start": "bsb -make-world -w"
+    "build": "rescript",
+    "clean": "rescript clean -with-deps",
+    "start": "rescript build -w""
   },
   "keywords": [
     "rescript"
   ],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "bs-platform": "*"
+  "dependencies": {
+    "rescript": "*"
   }
 }
 `

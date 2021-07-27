@@ -3,7 +3,7 @@
 
 
 function packageJson(name) {
-  return "\n{\n  \"name\": \"" + name + "\",\n  \"version\": \"0.0.1\",\n  \"description\": \"The great rescript project " + name + "\",\n  \"scripts\": {\n    \"build\": \"bsb -make-world\",\n    \"clean\": \"bsb -clean-world\",\n    \"start\": \"bsb -make-world -w\"\n  },\n  \"keywords\": [\n    \"rescript\"\n  ],\n  \"author\": \"\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"bs-platform\": \"*\"\n  }\n}\n";
+  return "\n{\n  \"name\": \"" + name + "\",\n  \"version\": \"0.0.1\",\n  \"description\": \"The great rescript project " + name + "\",\n  \"scripts\": {\n    \"build\": \"rescript\",\n    \"clean\": \"rescript clean -with-deps\",\n    \"start\": \"rescript build -w\"\"\n  },\n  \"keywords\": [\n    \"rescript\"\n  ],\n  \"author\": \"\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"rescript\": \"*\"\n  }\n}\n";
 }
 
 function bscongifJson(name) {
